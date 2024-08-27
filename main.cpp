@@ -10,16 +10,8 @@ class Person
     string lastName;
     int age;
 
-    Person() {
-      askInfo();
-    }
-
-    Person(string firstName, string lastName, int age)
-    {
-      this->firstName = firstName;
-      this->lastName = lastName;
-      this->age = age;
-    }
+    Person() { askInfo(); }
+    Person(string firstName, string lastName, int age) : firstName(firstName), lastName(lastName), age(age) {}
 
     void greet()
     {
@@ -115,10 +107,15 @@ class People
 
     void greet()
     {
-      for (Person person : peopleArr)
+      std::for_each(peopleArr.begin(), peopleArr.end(), [](Person person)
       {
         person.greet();
-      }
+      });
+
+      /*for (Person person : peopleArr)
+      {
+        person.greet();
+      }*/
     }
 
     void messenger()
