@@ -25,9 +25,10 @@ class Person
     {
       string msg;
       
-      vector<speechUtils> utils;
-      utils.push_back(make_speech_util(&Person::shout, "What do you want to shout? "));
-      utils.push_back(make_speech_util(&Person::whisper, "What do you want to whisper? "));
+      speechUtils utils[2] = {
+        make_speech_util(&Person::shout, "What do you want to shout? "),
+        make_speech_util(&Person::whisper, "What do you want to whisper? ")
+      };
 
       cin.ignore();
       for (speechUtils& util : utils)
