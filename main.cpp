@@ -41,10 +41,7 @@ class Person
       cout << "Thanks for playing!" << endl;
     }
 
-    void speak(speech_fn_t speechFn, string msg)
-    {
-      (this->*speechFn)(msg);
-    }
+    void speak(speech_fn_t speechFn, string msg) { (this->*speechFn)(msg); }
 
     void shout(string message)
     {
