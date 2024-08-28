@@ -20,8 +20,7 @@ class Person
 
     using speech_fn_t = void (Person::*)(string);
     
-    struct speechUtils
-    {
+    struct speechUtils {
       speech_fn_t fn;
       string prompt;
     };

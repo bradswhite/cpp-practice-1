@@ -21,8 +21,7 @@ void Person::messenger()
   };
 
   cin.ignore();
-  for (speechUtils& util : utils)
-  {
+  for (speechUtils& util : utils) {
     cout << util.prompt;
     getline(cin, msg);
     speak(util.fn, msg);
