@@ -7,26 +7,26 @@ using namespace std;
 
 int main()
 {
-  Person example("C", "Plus Plus", 50); 
-  example.greet();
-  example.shout("howdy sir");
+        Person example("C", "Plus Plus", 50); 
+        example.greet();
+        example.shout("howdy sir");
 
-  /*Person person;
-  person.greet();
-  person.messenger();*/
-  
-  People* people = new People();
-  
-  people->addPerson("Person", "#1", 1);
-  people->addPerson("Person", "#2", 2);
-  people->addPerson("Person", "#3", 3);
-  people->addPerson();
-  
-  people->greet();
+        /*Person person;
+        person.greet();
+        person.messenger();*/
 
-  people->messenger();
+        People* people = new People();
 
-  delete people;
+        people->addPerson("Person", "#1", 1);
+        people->addPerson("Person", "#2", 2);
+        people->addPerson("Person", "#3", 3);
+        people->addPerson();
 
-  return 0;
+        people->greet();
+
+        people->messenger();
+
+        delete people;
+
+        return 0;
 }

@@ -8,38 +8,38 @@ using namespace std;
 
 class Person
 {
-  public:
-    string firstName;
-    string lastName;
-    int age;
+        public:
+                string firstName;
+                string lastName;
+                int age;
 
-    Person();
-    Person(string firstName, string lastName, int age);
+                Person();
+                Person(string firstName, string lastName, int age);
 
-    void greet();
+                void greet();
 
-    using speech_fn_t = void (Person::*)(string);
-    
-    struct speechUtils {
-      speech_fn_t fn;
-      string prompt;
-    };
+                using speech_fn_t = void (Person::*)(string);
 
-    void messenger();
+                struct speechUtils {
+                        speech_fn_t fn;
+                        string prompt;
+                };
 
-    void speak(speech_fn_t speechFn, string msg);
-   
-    void shout(string message);
+                void messenger();
 
-    void whisper(string message);
+                void speak(speech_fn_t speechFn, string msg);
 
-  private:
-    speechUtils make_speech_util(speech_fn_t fn, string prompt);
+                void shout(string message);
 
-    void askInfo();
+                void whisper(string message);
 
-    template <typename V>
-    void ask(V Person::*value, string prompt);
+                private:
+                speechUtils make_speech_util(speech_fn_t fn, string prompt);
+
+                void askInfo();
+
+                template <typename V>
+                void ask(V Person::*value, string prompt);
     
 };
 

@@ -12,17 +12,17 @@ using namespace std;
 
 class People
 {
-  public:
-    vector<Person> peopleArr;
-    
-    People();
+        public:
+                vector<Person> peopleArr;
 
-    void addPerson();
-    void addPerson(string firstName, string lastName, int age);
+                People();
 
-    void greet();
-    
-    void messenger();
+                void addPerson();
+                void addPerson(string firstName, string lastName, int age);
+
+                void greet();
+
+                void messenger();
 };
 
 #endif
